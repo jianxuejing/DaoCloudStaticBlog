@@ -1,5 +1,5 @@
 FROM scratch
-MAINTAINER Jianying Li <lijianying12@gmail.com>
+MAINTAINER jianxuejing <jianxue.jing@gmail.com>
 
 ADD ./rootfs.tar / 
 RUN mkdir -p /app
