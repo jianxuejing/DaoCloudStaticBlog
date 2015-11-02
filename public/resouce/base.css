@@ -43,6 +43,10 @@ a {
 .clearfix {
   overflow: auto;
 }
+.clearleft{
+	clear: left;
+}
+
 .main{
 	margin:0 auto;
 	width:980px;
@@ -51,6 +55,20 @@ a {
 	margin-top: 5px;
     padding: 20px 15px;
     background-color: white;
+    height: 59px;
+    overflow: hidden;
+    position: relative;
+}
+.notice ul#pp-around{
+	position: absolute;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    top:4px;
+    transition-duration: 300ms;
+}
+.notice ul#pp-around > li{
+	line-height: 59px;
 }
 .notice .search{
 	float:right;
@@ -140,6 +158,32 @@ a {
 	color:#bbb;
 	line-height: 28px;
 }
+.tzgg{
+	border-radius: 5px;
+	background-color: #e22a28;
+    font-size: 14px;
+    font-weight: bold;
+    text-indent: 28px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+.tzgg .con{
+	margin: -8px 5px 0 5px;
+	border-radius: 5px;
+	background-color: white;
+    font-size: 14px;
+    text-indent: 28px;
+    line-height: 30px;
+}
+.tzgg .con ul{
+	margin:5px;
+	padding:5px;
+	list-style-type: none;
+}
+.tzgg .con ul > li{
+	font-weight:normal;
+	color: #333;	
+}
 .pgt{
 	width:300px;
 	height: 290px;
@@ -202,4 +246,109 @@ list-style: none;
     text-align: center;
     color: #888;
     padding: 35px 0 0 0;
+}
+
+.white{
+	background-color: #fff;
+}
+.listL {
+    float: left;
+    width: 229px;
+    margin-top:35px;
+}
+.listNav {
+    margin: 0 20px 0 10px;
+    list-style: none;
+    padding-left:12px;
+}
+.listNav li {
+    height: 49px;
+    line-height: 49px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.listNav li a {
+    display: block;
+    height: 49px;
+    font-size: 20px;
+    color: #005f92;
+    text-decoration: none;
+}
+.listNav li a:hover {
+    color: #005f92;
+    font-weight: 700;
+}
+
+.listR {
+    float: right;
+    width: 749px;
+    border-left: 1px solid #dedede;
+    margin: 30px 0 10px;
+}
+.listTit {
+    padding: 5px 0 5px 35px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #005f92;
+    margin:0;
+}
+.listUl {
+    padding: 0 10px 0 35px;
+    margin-bottom: 30px;
+    min-height: 550px;
+    height: 100%;
+    _height: 605px;
+    list-style: none;
+}
+.listUl li {
+    height: 54px;
+    line-height: 54px;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 18px;
+}
+.listUl li i {
+    float: left;
+    width: 4px;
+    height: 4px;
+    margin-top: 26px;
+    _margin-top: 25px;
+    margin-right: 10px;
+    background: #828282;
+    overflow: hidden;
+}
+.nextPage {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.details {
+    padding: 10px 60px;
+}
+.crumb {
+    height: 47px;
+    line-height: 47px;
+    vertical-align: middle;
+}
+.artTitle {
+	font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.details .info {
+    font-size: 12px;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.artCon {
+    padding-top: 20px;
+}
+.artCon p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 20px;
 }

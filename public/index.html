@@ -19,6 +19,19 @@ $(function(){
       namespace: "callbacks"
     });
 });
+var ppIndex = 0;
+function prePP(){
+	--ppIndex;
+	var l = $("#pp-around").children("li").length;
+	if(ppIndex<0)ppIndex=l-1;
+	$("#pp-around").css("top",(4-ppIndex*59)+"px");
+}
+function nextPP(){
+	++ppIndex;
+	var l = $("#pp-around").children("li").length;
+	if(ppIndex>l-1)ppIndex=0;
+	$("#pp-around").css("top",(4-ppIndex*59)+"px");
+}
 </script>
 </head>
 
@@ -39,9 +52,15 @@ $(function(){
 <div class="main">
 	
 	<div class="notice">
-		<span style="color:blue;" class">公告：</span>
-		<span style="width:500px;display: inline-block;">第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿
-		<span style="float:right"> <  > 更多</span>
+		<span style="color:blue;">公告：</span>
+		<span style="width:500px;display: inline-block;">
+		<ul id="pp-around">
+			<li>第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿1</li>
+			<li>第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿2</li>
+			<li>第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿3</li>
+			<li>第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿4</li>
+		</ul>
+		<span style="float:right"> <span onClick="prePP();" class=""><</span>  <span onClick="nextPP();">></span> 更多</span>
 		</span>
 		<div class="search">
 		<input class="search-input"><span class="search-button">搜索</span>
@@ -51,9 +70,9 @@ $(function(){
 	<div class="news">
 		<div class="img-news">
 		<ul class="rslides" id="slider">
-	      <li><img src="resouce/imgs/1.jpg"><p class="caption">This is a caption</p></li>
-	      <li><img src="resouce/imgs/2.jpg"><p class="caption">This is a caption</p></li>
-	      <li><img src="resouce/imgs/3.jpg"><p class="caption">This is a caption</p></li>
+	      <li><img src="resouce/imgs/1.jpg"><p class="caption">This is a caption1</p></li>
+	      <li><img src="resouce/imgs/2.jpg"><p class="caption">This is a caption2</p></li>
+	      <li><img src="resouce/imgs/3.jpg"><p class="caption">This is a caption3</p></li>
 	    </ul>
 		</div>
 		<div class="text-news">
@@ -129,6 +148,17 @@ $(function(){
 		来信请寄：<br>
 		来访请到：<br>
 		举报电话：<br>
+		</div>
+		<div class="tzgg clearfix">
+		通知公告
+		<div class="con">
+			<ul>
+			<li>坚持协调发展，着力形成平衡结构</li>
+			<li>坚持协调发展，着力形成平衡结构</li>
+			<li>坚持协调发展，着力形成平衡结构</li>
+			<li>坚持协调发展，着力形成平衡结构</li>
+		</ul></div>
+		
 		</div>
 		<div class="pgt"></div>
 		<div class="pgt-bottom"><span style="float:right;padding: 4px;"> + 更多 </span></div>
