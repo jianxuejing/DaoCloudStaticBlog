@@ -1,223 +1,409 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>沅江市纪律检查委员会</title>
-  <link rel="stylesheet" href="resouce/ResponsiveSlides/responsiveslides.css">
-  <link rel="stylesheet" href="resouce/ResponsiveSlides/demo.css">
-  <link rel="stylesheet" href="resouce/base.css">
-  <script src="resouce/js/jquery-1.8.3.min.js"></script>
-  <script src="resouce/ResponsiveSlides/responsiveslides.min.js"></script>
-<script type="text/javascript">
-$(function(){
-    $("#slider").responsiveSlides({
-      maxwidth: 550,
-      auto: false,
-      pager: false,
-      nav: true,
-      speed: 500,
-      namespace: "callbacks"
-    });
-});
-var ppIndex = 0;
-function prePP(){
-	--ppIndex;
-	var l = $("#pp-around").children("li").length;
-	if(ppIndex<0)ppIndex=l-1;
-	$("#pp-around").css("top",(4-ppIndex*59)+"px");
-}
-function nextPP(){
-	++ppIndex;
-	var l = $("#pp-around").children("li").length;
-	if(ppIndex>l-1)ppIndex=0;
-	$("#pp-around").css("top",(4-ppIndex*59)+"px");
-}
-</script>
-</head>
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<title>民政</title>
+<link rel="stylesheet" type="text/css" href="./images/style.css"/>
+<script src="jquery-1.11.3.min.js"></script>
+<style>
+.trade-category ul.lists{height:128px; border:#dcdcdc solid 1px; padding-left:11px; padding-top:18px;}
+.trade-category ul.lists li{float:left; display:inline; width:109px; height:107px; overflow:hidden; margin-right:14px; border:#eee solid 1px; text-align:center; background:url(type-bg.png) repeat-x;}
+.trade-category ul.lists li a{color:#666;}
+.trade-category ul.lists li em{display:block; padding-top:17px;}
+.trade-category ul.lists li span{display:block; line-height:20px; padding-top:5px; font-size:14px; font-weight:bold;}
+
+/*- trade-dynamics -*/
+.trade-dynamics{height:388px;}/*2015-9-28*/
+.trade-dynamics .tit{height:32px; overflow:hidden; background:url(/statics/images/ly2015/index/t-2.png) left bottom no-repeat; border-top:#eee solid 1px;}/*2015-9-28*/
+.trade-dynamics .tit h2{float:left; width:125px; height:32px;}/*2015-9-28*/
+.trade-dynamics .tit h2 strong{width:125px; height:32px; display:block; background:url(/statics/images/ly2015/index/ico-2.png) 12px 6px no-repeat; line-height:34px; text-indent:42px; font-size:16px; color:#333;}
+.trade-dynamics .tit ul{float:right; width:612px; height:32px; border-left:0;}
+.trade-dynamics .tit ul li{float:left; display:inline; height:32px; width:125px; overflow:hidden; margin-left:2px; line-height:30px; text-align:center; font-size:14px; font-weight:bold; cursor:pointer;}
+.trade-dynamics .tit ul li.cur{color:#f47a11;}
+.trade-dynamics .lists{height:394px; overflow:hidden; border:#dcdcdc solid 1px; border-top:0;}
+.trade-dynamics .lists ul.list-tit{height:35px; border-bottom:#dcdcdc solid 1px; background-color:#e0efff; margin-bottom:7px;}
+.trade-dynamics .lists ul.list-tit li{color:#1779de; font-size:14px; font-weight:bold;}
+.trade-dynamics .lists ul.list-con{height:320px; overflow:hidden;}
+.trade-dynamics .lists ul.list-con dl{height:32px;}
+.trade-dynamics .lists ul.list-con dd,.trade-dynamics .lists ul.list-tit li{padding:0 5px; height:32px; line-height:32px; text-align:center; float:left; display:inline; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.trade-dynamics .lists ul.list-con dd{color:#666;}
+.trade-dynamics .lists .l-1{width:60px;}
+.trade-dynamics .lists .l-2{width:225px;}
+.trade-dynamics .lists .l-3{width:90px;}
+.trade-dynamics .lists .l-4{width:115px;}
+.trade-dynamics .lists .l-5{width:196px;}
+.trade-dynamics .lists ul.list-con dd.l-5{text-align:left; text-indent:15px;}
+.trade-dynamics .lists ul.list-con dd a{color:#0790c3;}
+
+/*- trade-hall -*/
+.trade-hall{height:230px; overflow:hidden; border:#dcdcdc solid 1px;}
+.trade-hall .tit{height:34px; border-bottom:#dcdcdc solid 1px; background:#1779de url(/statics/images/ly2015/index/ico-3.png) 10px 5px no-repeat; text-indent:40px; line-height:34px; font-size:16px; font-weight:bold; color:#fff;}
+.trade-hall ul li{width:213px; height:41px; margin:13px auto 0 auto;}
+
+/*- trade-query -*/
+.trade-query{height:200px; overflow:hidden; border:#dcdcdc solid 1px;}
+.trade-query .tit{height:34px; border-bottom:#dcdcdc solid 1px; background:url(/statics/images/ly2015/index/ico-4.png) 10px 7px no-repeat; text-indent:40px; line-height:34px; font-size:16px; font-weight:bold; color:#1779de;}
+.trade-query ul{padding-top:5px;}
+.trade-query ul li{height:31px; overflow:hidden; padding-top:10px;}
+.trade-query ul li span{float:left; display:inline; width:68px; text-align:right; font-size:14px; color:#666; font-weight:bold; line-height:31px;}
+.trade-query ul li input,.trade-query ul li select{width:135px; height:29px; float:left; display:inline; border:#dcdcdc solid 1px; line-height:31px; margin:0px; padding:0px;}
+.trade-query .query-but{width:190px; height:34px; display:block; overflow:hidden; margin:25px auto 0 auto; background:#f47a11 url(/statics/images/ly2015/index/query-bg.png) 70px 7px no-repeat; text-align:center; border:0; color:#fff; font-size:14px; font-weight:bold; cursor:pointer; border-radius:5px;}
+
+</style>
+</head>
 <body>
-<div style="text-align: center;background-color: #2459A5;"><img src="resouce/imgs/top.jpg"></div>
-<div class="nbar" style="text-align: center;background-color: #e22a28;">
-	<ul class="clearfix">
-		<li><a href="#">首页</a></li>
-		<li><a href="#">机构设置</a></li>
-		<li><a href="#">本地动态</a></li>
-		<li><a href="#">廉政要闻</a></li>
-		<li><a href="#">案件快报</a></li>
-		<li><a href="#">曝光台</a></li>
-		<li><a href="#">资料查询</a></li>
-		<li><a href="#">专题专栏</a></li>
-	</ul>
-</div>
-<div class="main">
-	
-	<div class="notice">
-		<span style="color:blue;">公告：</span>
-		<span style="width:500px;display: inline-block;">
-		<ul id="pp-around">
-			<li>第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿1</li>
-			<li>第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿2</li>
-			<li>第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿3</li>
-			<li>第四届中国啥啥啥啥征稿第四届中国啥啥啥啥征稿4</li>
-		</ul>
-		<span style="float:right"> <span onClick="prePP();" class=""><</span>  <span onClick="nextPP();">></span> 更多</span>
-		</span>
-		<div class="search">
-		<input class="search-input"><span class="search-button">搜索</span>
-		</div>
-	</div>
-	
-	<div class="news">
-		<div class="img-news">
-		<ul class="rslides" id="slider">
-	      <li><img src="resouce/imgs/1.jpg"><p class="caption">This is a caption1</p></li>
-	      <li><img src="resouce/imgs/2.jpg"><p class="caption">This is a caption2</p></li>
-	      <li><img src="resouce/imgs/3.jpg"><p class="caption">This is a caption3</p></li>
-	    </ul>
-		</div>
-		<div class="text-news">
-			<div class="head"><span class="title">本地动态</span>  <span class="pull-right" style="padding-top: 10px;">+更多</span></div>
-			<ul>
-				<li>本地新闻本地新闻本地新闻本地新闻</li>
-				<li>本地新闻本地新闻本地新闻本地新闻</li>
-				<li>本地新闻本地新闻本地新闻本地新闻</li>
-				<li>本地新闻本地新闻本地新闻本地新闻</li>
-				<li>本地新闻本地新闻本地新闻本地新闻</li>
-				<li>本地新闻本地新闻本地新闻本地新闻</li>
-			</ul>
-		</div>
-	</div>
-	
-	<div class="info  clearfix">
-		<div class="content">
-			<div class="head">
-				<img src="resouce/imgs/t1.jpg" style="float:left"/>
-				<span style="float:right;margin-top: 20px;"> + 更多</span>
-				<div class="title">廉政要闻</div>
-				<div style="margin-left: 60px;">LIANZHENGYAOWEN</div>
+			<div class="head_logo"><img src="ttop2.JPG" style="width: 100%;"></img></div>
+		<div class="head">
+			<div class="menu_bg">
+				<div class="menu">
+					<ul>
+						<li onmouseover="this.className='bar'"
+							onmouseout="this.className='twhite1'" class="twhite1"
+							style="cursor: hand; width: 110px;"><a href="/">首页</a></li>
+						<li onmouseover="this.className='bar'"
+							onmouseout="this.className='twhite1'" class="twhite1"
+							style="cursor: hand; width: 110px;"><a href="/zzjg/">交易大厅</a></li>
+						<li onmouseover="this.className='bar'"
+							onmouseout="this.className='twhite1'" class="twhite1"
+							style="cursor: hand; width: 110px;"><a
+							href="http://xxgk.xm.gov.cn/sn/ml/" target="_blank">交易信息</a></li>
+						<!--					<li onmouseover="this.className='bar'" onmouseout="this.className='twhite1'" class="twhite1" style="cursor:hand;width:110px;"><a href="/ldjh/">领导讲话</a></li>-->
+						<li onmouseover="this.className='bar'"
+							onmouseout="this.className='twhite1'" class="twhite1"
+							style="cursor: hand; width: 110px;"><a href="/wsbg/">招标信息</a></li>
+						<li onmouseover="this.className='bar'"
+							onmouseout="this.className='twhite1'" class="twhite1"
+							style="cursor: hand; width: 110px;"><a href="/zcfg/">政策法规</a></li>
+						<li onmouseover="this.className='bar'"
+							onmouseout="this.className='twhite1'" class="twhite1"
+							style="cursor: hand; width: 110px;"><a href="/xxny/">通知公告</a></li>
+						<li onmouseover="this.className='bar'"
+							onmouseout="this.className='twhite1'" class="twhite1"
+							style="cursor: hand; width: 110px;"><a href="/tccx/">我要发布</a></li>
+						<!--<li onmouseover="this.className='bar'" onmouseout="this.className='twhite1'" class="twhite1" style="cursor:hand;width:110px;"><a href="/dmtsp/">多媒体视频</a></li>-->
+					</ul>
+					<div class="clear"></div>
+				</div>
 			</div>
-			<ul>
-				<li class="first">【纪委书记谈“四种形态”】：坚持抓早抓小 全面推进从严治党 </li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-			</ul>
-			<div class="line"></div>
-			<div class="head">
-				<img src="resouce/imgs/t2.jpg" style="float:left"/>
-				<span style="float:right;margin-top: 20px;"> + 更多</span>
-				<div class="title">廉政要闻</div>
-				<div style="margin-left: 60px;">LIANZHENGYAOWEN</div>
-			</div>
-			<ul>
-				<li class="first">【纪委书记谈“四种形态”】：坚持抓早抓小 全面推进从严治党 </li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-			</ul>
-			<div class="line"></div>
-			<div class="head">
-				<img src="resouce/imgs/t3.jpg" style="float:left"/>
-				<span style="float:right;margin-top: 20px;"> + 更多</span>
-				<div class="title">廉政要闻</div>
-				<div style="margin-left: 60px;">LIANZHENGYAOWEN</div>
-			</div>
-			<ul>
-				<li class="first">【纪委书记谈“四种形态”】：坚持抓早抓小 全面推进从严治党 </li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-				<li>温州市纪委通报八起“四风”问题典型案件</li>
-			</ul>
 		</div>
-		<div class="side">
-		<img src="resouce/imgs/p1.jpg" style="margin-bottom: 5px;">
-		<img src="resouce/imgs/p2.jpg" style="margin-bottom: 5px;">
-		<img src="resouce/imgs/p3.jpg" style="margin-bottom: 5px;">
-		<img src="resouce/imgs/p4.jpg" style="margin: 0 -2px 5px 7px;">
-		<img src="resouce/imgs/p5.jpg" style="margin-top: 5px;">
-		<div class="jb">
-		来信请寄：<br>
-		来访请到：<br>
-		举报电话：<br>
-		</div>
-		<div class="tzgg clearfix">
-		通知公告
-		<div class="con">
-			<ul>
-			<li>坚持协调发展，着力形成平衡结构</li>
-			<li>坚持协调发展，着力形成平衡结构</li>
-			<li>坚持协调发展，着力形成平衡结构</li>
-			<li>坚持协调发展，着力形成平衡结构</li>
-		</ul></div>
+	<div class="con">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="353" height="280" class="bor1">
+	</td>
+    <td width="10"></td>
+    <td width="400" valign="top" >
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" height="30" bgcolor="#daf4e1">
+      <tr>
+        <td width="6%"><img src="./images/13sn_tit_l.jpg"></td>
+        <td width="68%" class="t14 tb tgreen1">新闻中心</td>
+        <td width="26%" class="more">[<a href="./snyw/" target="_blank">更多</a>]</td>
+      </tr>
+    </table>
+        <table width="93%" border="0" cellspacing="0" cellpadding="0" class="h24 mar_t10">
+      <tbody><tr>
+        <td>·<a href="./zcfg/zc/201510/t20151023_1215258.htm" target="_blank" title="厦门市农业局关于印发厦门市休闲农业示范点认定管理办法的通知">厦门市农业局关于印发厦门市休闲农业示范点认定管理办...</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201510/t20151023_1215246.htm" target="_blank" title="厦门市农业局  厦门市财政局关于印发厦门市家庭农场示范场评定管理办法的通知">厦门市农业局  厦门市财政局关于印发厦门市家庭农场示...</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201412/t20141219_1025704.htm" target="_blank" title="关于扶持农村社区股份合作经济项目的实施管理办法">关于扶持农村社区股份合作经济项目的实施管理办法</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201403/t20140311_835595.htm" target="_blank" title="关于加快统筹城乡发展推进农业科技创新促进农民稳定增收的若干意见">关于加快统筹城乡发展推进农业科技创新促进农民稳定增...</a></td>
+      </tr>
+	
+      <tr>
+        <td>·<a href="./zcfg/zc/201311/t20131101_749877.htm" target="_blank" title="福建省制茶高级工程师职务任职资格评审条件（试行）">福建省制茶高级工程师职务任职资格评审条件（试行）</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201303/t20130328_621646.htm" target="_blank" title="关于加快推进城乡发展一体化进一步增强农村发展活力的若干意见">关于加快推进城乡发展一体化进一步增强农村发展活力的...</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201209/t20120905_526723.htm" target="_blank" title="农产品质量安全监测管理办法">农产品质量安全监测管理办法</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201311/t20131101_749877.htm" target="_blank" title="福建省制茶高级工程师职务任职资格评审条件（试行）">福建省制茶高级工程师职务任职资格评审条件（试行）</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201303/t20130328_621646.htm" target="_blank" title="关于加快推进城乡发展一体化进一步增强农村发展活力的若干意见">关于加快推进城乡发展一体化进一步增强农村发展活力的...</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201209/t20120905_526723.htm" target="_blank" title="农产品质量安全监测管理办法">农产品质量安全监测管理办法</a></td>
+      </tr>
+	
+    </tbody></table>
+    </td>
+    <td width="10"></td>
+    <td width="225" valign="top" class="bor1">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" height="32" class="tit1">
+      <tr>
+        <td width="73%" class="t14 tb pad_l30 twhite1">政策法规</td>
+        <td width="27%" class="tgreen2 pad_r10" align="right">[<a href="./zwgk/tzgg/" target="_blank">更多</a>]</td>
+      </tr>
+    </table>
+    <table width="93%" border="0" cellspacing="0" cellpadding="0" class="h24 mar_t10">
+      <tbody><tr>
+        <td>·<a href="./zcfg/zc/201510/t20151023_1215258.htm" target="_blank" title="厦门市农业局关于印发厦门市休闲农业示范点认定管理办法的通知">厦门市农休示范点认定管理办...</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201510/t20151023_1215246.htm" target="_blank" title="厦门市农业局  厦门市财政局关于印发厦门市家庭农场示范场评定管理办法的通知">市财政局关于市家庭农场示...</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201412/t20141219_1025704.htm" target="_blank" title="关于扶持农村社区股份合作经济项目的实施管理办法">关于扶持农村社施管理办法</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201403/t20140311_835595.htm" target="_blank" title="关于加快统筹城乡发展推进农业科技创新促进农民稳定增收的若干意见">关于加快科技促民稳定增...</a></td>
+      </tr>
+	
+      <tr>
+        <td>·<a href="./zcfg/zc/201311/t20131101_749877.htm" target="_blank" title="福建省制茶高级工程师职务任职资格评审条件（试行）">福程师职务格评审条件（试行）</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201303/t20130328_621646.htm" target="_blank" title="关于加快推进城乡发展一体化进一步增强农村发展活力的若干意见">关于加快一体强村发展活力的...</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201209/t20120905_526723.htm" target="_blank" title="农产品质量安全监测管理办法">农产品质量安全监测理办法</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201311/t20131101_749877.htm" target="_blank" title="福建省制茶高级工程师职务任职资格评审条件（试行）">福建省务任职资格评审件（试行）</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201303/t20130328_621646.htm" target="_blank" title="关于加快推进城乡发展一体化进一步增强农村发展活力的若干意见">关于加快进步增强村发展活力的...</a></td>
+      </tr>
+      <tr>
+        <td>·<a href="./zcfg/zc/201209/t20120905_526723.htm" target="_blank" title="农产品质量安全监测管理办法">农产品质量安全管理办法</a></td>
+      </tr>
+	
+    </tbody></table>
+    </td>
+  </tr>
+</table>
+<table width="1000" border="0" cellspacing="0" cellpadding="0" class=" mar_t8">
+  <tr>
+    <td><a href="./qzlxjy/"><img src="./images/13sn_ban.jpg" border="0"></a></td>
+  </tr>
+</table>
+<table width="1000" border="0" cellspacing="0" cellpadding="0" class="mar_t10 trade-category">
+  <tr>
+    <td width="780" valign="top" class="">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tit2" height="31">
+      <tr>
+        <td width="75%" class="t14 tb pad_l15">交易类别</td>
+        <td width="25%" class="more">[<a href="./zcfg/zc/" target="_blank">更多</a>]</td>
+      </tr>
+    </table>
+    <ul class="lists">
+            	<li>
+                	<a href="/index.php?m=yp&amp;c=index&amp;a=lists&amp;catid=34" target="_blank">
+                    <em><img src="http://www.lynczyjy.com/statics/images/ly2015/index/type-1.png"></em>
+                    <span>农村集体土地</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="/index.php?m=yp&amp;c=index&amp;a=lists&amp;catid=35" target="_blank">
+                    <em><img src="http://www.lynczyjy.com/statics/images/ly2015/index/type-2.png"></em>
+                    <span>林木林地</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="/index.php?m=yp&amp;c=index&amp;a=lists&amp;catid=36" target="_blank">
+                    <em><img src="http://www.lynczyjy.com/statics/images/ly2015/index/type-3.png"></em>
+                    <span>河道水面经营权</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="/index.php?m=yp&amp;c=index&amp;a=lists&amp;catid=37" target="_blank">
+                    <em><img src="http://www.lynczyjy.com/statics/images/ly2015/index/type-4.png"></em>
+                    <span>农业机械机具</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="/index.php?m=yp&amp;c=index&amp;a=lists&amp;catid=38" target="_blank">
+                    <em><img src="http://www.lynczyjy.com/statics/images/ly2015/index/type-5.png"></em>
+                    <span>水域滩涂养殖</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="/index.php?m=yp&amp;c=index&amp;a=lists&amp;catid=39" target="_blank">
+                    <em><img src="http://www.lynczyjy.com/statics/images/ly2015/index/type-6.png"></em>
+                    <span>其它交易类别</span>
+                    </a>
+                </li>
+            </ul>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tit2" height="31" style="margin-top: 10px">
+	      <tr>
+	        <td width="75%" class="t14 tb pad_l15">交易动态</td>
+	        <td width="25%" class="more">[<a href="./zcfg/zc/" target="_blank">更多</a>]</td>
+	      </tr>
+	    </table>
+	    <div class="trade-dynamics">
+            <div class="lists">
+            	<ul class="list-tit">
+                	<li class="l-1">镇街</li>
+                    <li class="l-2">标题</li>
+                    <li class="l-3">资产类别</li>
+                    <li class="l-4">交易面积</li>
+                    <li class="l-5">资产地址</li>
+                </ul>
+                <ul class="list-con">
+                	<li id="mobile_type_text">  <dl><dd class="l-1">古港镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=46">【已成交】浏阳市古港镇新园村罗正根林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">33.4亩</dd> <dd class="l-5">浏阳市古港镇仙州村</dd> </dl>  <dl><dd class="l-1">七宝山乡</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=47">【已成交】浏阳市七宝山乡蒋埠江村林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">4亩</dd> <dd class="l-5">浏阳市七宝山乡蒋埠江村香铺组</dd> </dl>  <dl><dd class="l-1">七宝山乡</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=48">【已成交】浏阳市七宝山乡蒋埠江村林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">36亩</dd> <dd class="l-5">浏阳市七宝山乡蒋埠江村立山组</dd> </dl>  <dl><dd class="l-1">淳口镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=49">【已成交】浏阳市佳源生态农林产业开发有限公司林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">87.5亩</dd> <dd class="l-5">浏阳市淳口镇羊古滩社区老渡四组 </dd> </dl>  <dl><dd class="l-1">澄潭江镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=34&amp;id=53">【已成交】浏阳市澄潭江镇洲田村林家组土地流转</a></dd><dd class="l-3"> 农村集体土地</dd><dd class="l-4">100亩</dd> <dd class="l-5">浏阳市澄潭江镇洲田村林家组</dd> </dl>  <dl><dd class="l-1">普迹镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=54">【已成交】湖南未名创林生物能源有限公司林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">176.2亩</dd> <dd class="l-5">浏阳市普迹镇五丰村桂花组、坳上组</dd> </dl>  <dl><dd class="l-1">沿溪镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=55">【已成交】浏阳市沿溪镇沿溪桥社区 汤祖浩林权转让</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">209亩</dd> <dd class="l-5">浏阳市沿溪镇金桔村上冲组、陈家组</dd> </dl>  <dl><dd class="l-1">高坪镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=56">【已成交】浏阳市高坪镇石湾村彭家组刘新辉林权转让</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">1784亩</dd> <dd class="l-5">浏阳市高坪镇三合水村</dd> </dl>  <dl><dd class="l-1">大围山镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=57">【已成交】大围山镇同幸村、浏河源村林权转让</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">2202亩</dd> <dd class="l-5">浏阳市大围山镇同幸村石湾组</dd> </dl>  <dl><dd class="l-1"></dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=34&amp;id=59">【已成交】普迹镇普泰村岭上组31户承包户农村土地承包经营权委托流转</a></dd><dd class="l-3"> 农村集体土地</dd><dd class="l-4">129.94</dd> <dd class="l-5">浏阳市普迹镇普泰村岭上组</dd> </dl></li>
+                    <li id="mobile_type_text1">  <dl><dd class="l-1">古港镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=46">【已成交】浏阳市古港镇新园村罗正根林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">33.4亩</dd> <dd class="l-5">浏阳市古港镇仙州村</dd> </dl>  <dl><dd class="l-1">七宝山乡</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=47">【已成交】浏阳市七宝山乡蒋埠江村林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">4亩</dd> <dd class="l-5">浏阳市七宝山乡蒋埠江村香铺组</dd> </dl>  <dl><dd class="l-1">七宝山乡</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=48">【已成交】浏阳市七宝山乡蒋埠江村林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">36亩</dd> <dd class="l-5">浏阳市七宝山乡蒋埠江村立山组</dd> </dl>  <dl><dd class="l-1">淳口镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=49">【已成交】浏阳市佳源生态农林产业开发有限公司林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">87.5亩</dd> <dd class="l-5">浏阳市淳口镇羊古滩社区老渡四组 </dd> </dl>  <dl><dd class="l-1">澄潭江镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=34&amp;id=53">【已成交】浏阳市澄潭江镇洲田村林家组土地流转</a></dd><dd class="l-3"> 农村集体土地</dd><dd class="l-4">100亩</dd> <dd class="l-5">浏阳市澄潭江镇洲田村林家组</dd> </dl>  <dl><dd class="l-1">普迹镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=54">【已成交】湖南未名创林生物能源有限公司林权流转</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">176.2亩</dd> <dd class="l-5">浏阳市普迹镇五丰村桂花组、坳上组</dd> </dl>  <dl><dd class="l-1">沿溪镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=55">【已成交】浏阳市沿溪镇沿溪桥社区 汤祖浩林权转让</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">209亩</dd> <dd class="l-5">浏阳市沿溪镇金桔村上冲组、陈家组</dd> </dl>  <dl><dd class="l-1">高坪镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=56">【已成交】浏阳市高坪镇石湾村彭家组刘新辉林权转让</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">1784亩</dd> <dd class="l-5">浏阳市高坪镇三合水村</dd> </dl>  <dl><dd class="l-1">大围山镇</dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=35&amp;id=57">【已成交】大围山镇同幸村、浏河源村林权转让</a></dd><dd class="l-3">林木林地</dd><dd class="l-4">2202亩</dd> <dd class="l-5">浏阳市大围山镇同幸村石湾组</dd> </dl>  <dl><dd class="l-1"></dd><dd class="l-2"><a target="_blank" href="/index.php?m=yp&amp;c=index&amp;a=show&amp;catid=34&amp;id=59">【已成交】普迹镇普泰村岭上组31户承包户农村土地承包经营权委托流转</a></dd><dd class="l-3"> 农村集体土地</dd><dd class="l-4">129.94</dd> <dd class="l-5">浏阳市普迹镇普泰村岭上组</dd> </dl></li>
+                    <script type="text/javascript">
+           			show_mobiletype(1,3);         
+                    //显示添加机型
+					function show_mobiletype(modelid,id) {
+//     					$.getJSON("/index.php?m=dbsource&c=call&a=get&id=1", function(json){
+							var speed=30;
+							var tab=$(".list-con");
+							var tab1=$("#mobile_type_text");
+							var tab2=$("#mobile_type_text1");
+							tab2.html(tab1.html());
+							function Marquee(){
+							if(tab.scrollTop() >= tab2.height())
+								tab.scrollTop(0);
+							else{
+								tab.scrollTop(tab.scrollTop()+1);
+							}
+							}
+							var MyMar=setInterval(Marquee,speed);
+							tab.hover(function(){clearInterval(MyMar);},function(){MyMar=setInterval(Marquee,speed);})
+							//无缝滚动 结束
+//     					}); 
+					}
+                    </script>  
+                </ul>
+            </div>
+        </div>
+    </td>
+    <td width="10"></td>
+    <td width="225" valign="top" class="">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="32" class="tit1">
+      <tr>
+        <td width="73%" class="t14 tb pad_l30 twhite1">交易大厅</td>
+        <td width="27%" class="tgreen2 pad_r10" align="right">[<a href="./zwgk/tzgg/" target="_blank">更多</a>]</td>
+      </tr>
+    </table>
+    <div class="trade-hall">
+        <ul>
+        	<li><a href="/index.php?m=member&amp;c=index&amp;a=login" target="_blank"><img src="http://www.lynczyjy.com/statics/images/ly2015/index/hall-1.png"></a></li>
+            <li><a href="jiaoyizhinan" target="_blank"><img src="http://www.lynczyjy.com/statics/images/ly2015/index/hall-2.png"></a></li>
+            <li><a href="/html/aboutus/?pc_hash=w94xYl" target="_blank"><img src="http://www.lynczyjy.com/statics/images/ly2015/index/hall-3.png"></a></li>
+            <li><a href="/index.php?m=link&amp;siteid=1" target="_blank"><img src="http://www.lynczyjy.com/statics/images/ly2015/index/hall-4.png"></a></li>
+        </ul>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" height="32" class="tit1 mar_t10">
+      <tr>
+        <td width="73%" class="t14 tb pad_l30 twhite1">综合查询</td>
+        <td width="27%" class="tgreen2 pad_r10" align="right">[<a href="./zwgk/tzgg/" target="_blank">更多</a>]</td>
+      </tr>
+    </table>
+    <div class="trade-query">
+        <form enctype="multipart/form-data" method="get" action="/index.php">
+        <input name="m" type="hidden" value="yp">
+        <input name="c" type="hidden" value="index">
+        <input name="a" type="hidden" value="lists">
+        <ul>
+        	<li><span>地　区:</span><input type="text" value=""></li>
+            <li><span>类　别:</span>
+            <select name="catid" id="catid"><option value="34">  农村集体土地</option><option value="35"> 林木林地</option><option value="36"> 河道水面经营</option><option value="37"> 农业机械机具</option><option value="38"> 水域滩涂养殖</option><option value="39"> 其他交易类别</option></select></li>
+            <li><span>关键字:</span><input type="text" value=""></li>
+        </ul>
+        <input type="submit" value="查询" class="query-but">
+        </form>
+    </div>
+    </td>
+  </tr>
+</table>
+<table width="1000" border="0" cellspacing="0" cellpadding="0" class="tit6" height="32">
+  <tr>
+    <td width="84" class="tit6_bar">友情链接</td>
+    <td width="915">&nbsp;</td>
+  </tr>
+</table>
+<table width="1000" border="0" cellspacing="0" cellpadding="0" class="bor1 bor_to">
+  <tr>
+    <td valign="top" class="pad_t10 pad_b10">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="h24">
+      
+	  <tr>
+	    <td align="left" width="4%"></td>
 		
-		</div>
-		<div class="pgt"></div>
-		<div class="pgt-bottom"><span style="float:right;padding: 4px;"> + 更多 </span></div>
-		<div class="ztzn"></div>
-		</div>
-	</div>
-	
-	<div class="yqlj clearfix">
-	<ul class="ljTit clearfix">
-		<li class="active">上级纪委网站</li>
-		<li class="">省委机构</li>
-		<li class="">省政府机构</li>
-		<li class="">省内纪检监察机关</li>
-		<li class="">新闻媒体</li>
-	</ul>
-	<ul class="ljLink clearfix linkshow">
-			<li><a href="http://www.ccdi.gov.cn" target="_blank" rel="nofollow">中央纪委监察部</a></li>
-			<li><a href="http://zgjjjc.ccdi.gov.cn" target="_blank" rel="nofollow">中国纪检监察杂志</a></li>
-			<li><a href="http://csr.mos.gov.cn" target="_blank" rel="nofollow">中国纪检监察报</a></li>
-			<li><a href="http://www.lianzheng.com.cn" target="_blank" rel="nofollow">中国方正出版社</a></li>
-			<li><a href="http://irc.mos.gov.cn" target="_blank" rel="nofollow">中国监察学会</a></li>
-			<li><a href="http://www.bjsupervision.gov.cn" target="_blank" rel="nofollow">北京</a></li>
-			<li><a href="http://www.tjjw.gov.cn" target="_blank" rel="nofollow">天津</a></li>
-			<li><a href="http://www.hebcdi.gov.cn" target="_blank" rel="nofollow">河北</a></li>
-			<li><a href="http://www.sxdi.gov.cn" target="_blank" rel="nofollow">山西</a></li>
-			<li><a href="http://www.nmgjjjc.gov.cn" target="_blank" rel="nofollow">内蒙古</a></li>
-			<li><a href="http://www.lnsjjjc.gov.cn" target="_blank" rel="nofollow">辽宁</a></li>
-			<li><a href="http://www.ccdijl.gov.cn" target="_blank" rel="nofollow">吉林</a></li>
-			<li><a href="http://www.mingjian.com" target="_blank" rel="nofollow">黑龙江</a></li>
-			<li><a href="http://www.shjjjc.gov.cn" target="_blank" rel="nofollow">上海</a></li>
-			<li><a href="http://www.jssjw.gov.cn" target="_blank" rel="nofollow">江苏</a></li>
-			<li><a href="http://www.ahjjjc.gov.cn" target="_blank" rel="nofollow">安徽</a></li>
-			<li><a href="http://www.fjcdi.gov.cn" target="_blank" rel="nofollow">福建</a></li>
-			<li><a href="http://www.jxdi.gov.cn" target="_blank" rel="nofollow">江西</a></li>
-			<li><a href="http://www.mirror.gov.cn" target="_blank" rel="nofollow">山东</a></li>
-			<li><a href="http://www.hnsjct.gov.cn" target="_blank" rel="nofollow">河南</a></li>
-			<li><a href="http://www.hbjwjc.gov.cn" target="_blank" rel="nofollow">湖北</a></li>
-			<li><a href="http://www.sxfj.gov.cn" target="_blank" rel="nofollow">湖南</a></li>
-			<li><a href="http://www.gdjct.gd.gov.cn" target="_blank" rel="nofollow">广东</a></li>
-			<li><a href="http://www.gxjjw.gov.cn" target="_blank" rel="nofollow">广西</a></li>
-			<li><a href="http://www.hnlzw.net" target="_blank" rel="nofollow">海南</a></li>
-			<li><a href="http://jjc.cq.gov.cn" target="_blank" rel="nofollow">重庆</a></li>
-			<li><a href="http://www.scjc.gov.cn" target="_blank" rel="nofollow">四川</a></li>
-			<li><a href="http://www.gzdis.gov.cn" target="_blank" rel="nofollow">贵州</a></li>
-			<li><a href="http://www.jjjc.yn.gov.cn" target="_blank" rel="nofollow">云南</a></li>
-			<li><a href="http://www.xzjjw.gov.cn/" target="_blank" rel="nofollow">西藏</a></li>
-			<li><a href="http://www.qinfeng.gov.cn" target="_blank" rel="nofollow">陕西</a></li>
-			<li><a href="http://gsjw.gov.cn" target="_blank" rel="nofollow">甘肃</a></li>
-			<li><a href="http://www.nxjjjc.gov.cn" target="_blank" rel="nofollow">宁夏</a></li>
-			<li><a href="http://www.qhjc.gov.cn" target="_blank" rel="nofollow">青海</a></li>
-			<li><a href="http://www.xjjct.gov.cn" target="_blank" rel="nofollow">新疆</a></li>
-			<li><a href="http://bos.xjbt.gov.cn" target="_blank" rel="nofollow">新疆建设兵团</a></li>
-		</ul>
-	</div>
-	
-	<div class="box footer">
-		<p>中共沅江市委、沅江市人民政府主办 沅江市信息中心承办 沅江市人民政府版权所有</p>
-		<p>Copyright 1999-2008 Yuanjiang Municipal Government All Rights Reserved</p>
-	</div>
+		<td align="left">&nbsp;<a href="http://www.agri.gov.cn/" target="_blank">中国农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.fjagri.gov.cn/" target="_blank">福建农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://cxlt.agrihx.com/index.asp" target="_blank">海峡农业网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.fjym.gov.cn/" target="_blank">福建省水利水电工程移民网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.xmagri.net.cn/" target="_blank">厦门农网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://3502.fjsnw.cn/" target="_blank">厦门市三农服务网</a></td>
+		
+	  </tr>
+	  
+	  <tr>
+	    <td align="left" width="4%"></td>
+		
+		<td align="left">&nbsp;<a href="http://www.zzglz.xm.gov.cn/" target="_blank">厦门种业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.xm.gov.cn/ncxxfwpt" target="_blank">农村信息服务平台</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.cuncun8.com" target="_blank">世纪之村</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.qznyw.gov.cn/" target="_blank">泉州农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.zzhk.gov.cn" target="_blank">漳州市农业局</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.ny155.com/" target="_blank">三明农业信息网</a></td>
+		
+	  </tr>
+	  
+	  <tr>
+	    <td align="left" width="4%"></td>
+		
+		<td align="left">&nbsp;<a href="http://www.fjlyagri.gov.cn/" target="_blank">龙岩农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.ytnyj.gov.cn" target="_blank">膺潭市农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://agri.jieyang.gd.cn" target="_blank">揭阳农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.czagri.com" target="_blank">潮州农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://agri.meizhou.gov.cn/" target="_blank">梅州农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://agri.shantou.gov.cn/" target="_blank">汕头农林信息网</a></td>
+		
+	  </tr>
+	  
+	  <tr>
+	    <td align="left" width="4%"></td>
+		
+		<td align="left">&nbsp;<a href="http://www.swny.gov.cn/" target="_blank">汕尾农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.gzny.gov.cn/" target="_blank">赣州三农网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://nyj.jxfz.gov.cn/" target="_blank">抚州农业信息网</a></td>
+		
+		<td align="left">&nbsp;<a href="http://www.ipraction.cn/" target="_blank">中国打击侵权假冒工作网</a></td>
+		
+	  </tr>
+	  
+    </table>
+    </td>
+  </tr>
+</table>
 </div>
+	<div class="bot">
+		网站管理：湖南益阳市XXXXXXX局 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  地址：中华人民共和国391号<br>
+		技术支持：民政部信息中心  &nbsp;&nbsp;&nbsp; 邮编：413100 &nbsp;&nbsp;&nbsp; 电话:2736897
+	</div>
+	<!--[if IE 6]>
+<script type="text/javascript" src="images/iepng.js"></script>
+<![endif]-->
 </body>
 </html>
